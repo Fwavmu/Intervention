@@ -1,0 +1,30 @@
+---
+title: "Demographic Variables"
+output: html_document
+date: "2025-04-02"
+---
+
+```{r}
+
+library(ggplot2)
+
+
+# Histogram for Age
+ggplot(task_data_wide, aes(x = Age_baseline)) +
+  geom_histogram(binwidth = 5, fill = "light blue", color = "black") +
+  labs(title = "Age Distribution", x = "Age", y = "Frequency") +
+  theme_minimal()
+
+
+# Bar plot for Gender
+ggplot(task_data_wide, aes(x = Gender_baseline)) +
+  geom_bar(fill = "yellow", color = "black") +
+  labs(title = "Gender Distribution", x = "Gender", y = "Count") +
+  theme_minimal()
+
+# Bar plot for Form
+ggplot(task_data_wide, aes(x = Form_baseline)) +
+  geom_bar(fill = "lightgreen", color = "black") +
+  labs(title = "Form Distribution", x = "Form", y = "Count") +
+  theme_minimal()
+```
